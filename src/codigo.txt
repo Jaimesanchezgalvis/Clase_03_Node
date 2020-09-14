@@ -1,0 +1,17 @@
+// Archivo pet.routes.js dentro de la carpeta routes
+const express = require('express');
+
+const Pets = require('../models/Pets');
+
+const router = express.Router();
+
+router.get('/', async (req, res) => {
+    try {
+        const pets = await Pets.find();
+        return res.status(200).json(pets)
+    } catch (err) {
+        return res.status(500).json(err);
+    }
+});
+
+module.exports = router;

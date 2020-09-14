@@ -4,7 +4,7 @@
   "description": "Este modulo me sirve para aprender Express",
   "main": "./src/index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon ./src/index.js"
   },
   "author": "Jaime",
   "license": "ISC",

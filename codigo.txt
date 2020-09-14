@@ -1,0 +1,34 @@
+router.get("/crear", (req, res) => {
+
+    const pet = new Pets()
+
+    pet.name = "pepe";
+    pet.age = 9;
+    pet.species = "Perro"
+
+    pet.save()
+        .then((newPet)=>{
+        console.log(newPet);
+        res.json(newPet);
+    })
+    .catch((error)=>{
+    console.log(error)
+    res.sen(error);
+})
+
+});
+
+server.use("/leer",router);
+
+router.get("/leer", (req, res) => {
+
+    Pets.find({})
+        .then((newPet) => {
+            console.log(newPet)
+            res.send(error);
+        })
+
+    pet.save()
+        .catch()
+});
+
